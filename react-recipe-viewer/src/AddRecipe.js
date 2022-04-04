@@ -1,5 +1,6 @@
 import React from 'react'
 import './Addrecipe.css'
+import { useHistory } from 'react-router-dom'
 
 export default function Addrecipe() {
   let formData = {
@@ -24,6 +25,12 @@ export default function Addrecipe() {
     
     
     }
+    const history = useHistory()
+
+    function handleClick(){
+        history.push('/')
+        
+    }
 
   return <>
     <div className="addrecipe-container">
@@ -38,7 +45,7 @@ export default function Addrecipe() {
     <label for="subject">Steps</label>
     <textarea id="steps" name="subject" placeholder="Describe the steps of the recipe.." style={{height:"200px"}}></textarea>
 
-    <input type="submit" value="Submit"/>
+    <input type="submit" value="Submit" onClick={handleClick}/>
 
   </form>
 </div> 
