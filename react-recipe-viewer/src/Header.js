@@ -27,7 +27,7 @@ export default function Header() {
   <nav id='menu'>
   <input type='checkbox' id='responsive-menu' onClick={updatemenu}/><label></label>
   <ul>
-    {/* <li> <NavLink
+    <li> <NavLink
         to="/"
         exact
         activeStyle={{
@@ -63,7 +63,7 @@ export default function Header() {
         }}
       >
         Add recipe
-      </NavLink></li> */}
+      </NavLink></li>
   </ul>
 
     
