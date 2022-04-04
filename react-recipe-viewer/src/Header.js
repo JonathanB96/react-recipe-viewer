@@ -1,6 +1,7 @@
 import React from 'react'
 import "./Header.css"
 import { NavLink } from "react-router-dom";
+import { useHistory } from 'react-router';
 
 const linkStyles = {
     display: "inline-block",
@@ -22,6 +23,11 @@ export default function Header() {
           document.getElementById('menu').style.borderRadius = '5px';
         }
       }
+    const history = useHistory()
+    function handleClick(){
+        history.push('/')
+      }
+        
       
   return <>
   <nav id='menu'>
@@ -75,7 +81,7 @@ export default function Header() {
 
 
   <div style={{float :"right",
-"margin-right": "10%", }}><h1 style={{color:"#fff"}}>//Recipe Viewer</h1></div>
+"margin-right": "10%", }}><h1 style={{color:"#fff", cursor : "pointer"}}  onClick={handleClick}>//Recipe Viewer</h1></div>
  </nav>
   </>
 }
