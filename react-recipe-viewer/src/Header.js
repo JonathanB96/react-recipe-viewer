@@ -81,7 +81,7 @@ export default function Header() {
 
 
   <div style={{float :"right",
-"margin-right": "10%", }}><h1 style={{color:"#fff", cursor : "pointer"}}  onClick={handleClick}>//Recipe Viewer</h1></div>
+marginRight: "10%", }}><h1 style={{color:"#fff", cursor : "pointer"}}  onClick={handleClick}>//Recipe Viewer</h1></div>
  </nav>
   </>
 }

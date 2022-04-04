@@ -21,10 +21,10 @@ export default function Addrecipe() {
         "Content-Type": "application/json",
         Accept: "application/json"},
       body: JSON.stringify(formData)
-    })
-    
+    })    
     
     }
+
     const history = useHistory()
 
     function handleClick(){
@@ -36,14 +36,14 @@ export default function Addrecipe() {
     <div className="addrecipe-container">
   <form id='addRecipe-form' onSubmit={handleSubmit}>
 
-    <label for="fname">Recipe name</label>
-    <input type="text" id="recipeName" name="firstname" placeholder="Recipe name.."/>
+    <label>Recipe name</label>
+    <input type="text" id="recipeName" placeholder="Recipe name.."/>
 
-    <label for="lname">Image URL</label>
-    <input type="text" id="imageUrl" name="lastname" placeholder="Image URL here"/>
+    <label>Image URL</label>
+    <input type="text" id="imageUrl" placeholder="Image URL here"/>
 
-    <label for="subject">Steps</label>
-    <textarea id="steps" name="subject" placeholder="Describe the steps of the recipe.." style={{height:"200px"}}></textarea>
+    <label>Steps</label>
+    <textarea id="steps" placeholder="Describe the steps of the recipe.." style={{height:"200px"}}></textarea>
 
     <input type="submit" value="Submit" onClick={handleClick}/>
 

@@ -9,7 +9,7 @@ export default function Card({recipe}) {
   }
 
   return <>
-  <div className='card' style={{"background-image": `url(${recipe.image})`}}>
+  <div className='card' style={{backgroundImage: `url(${recipe.image})`}}>
   
         <div className="overlay">
             <h4>{recipe.name}</h4>

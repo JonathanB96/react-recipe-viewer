@@ -11,7 +11,6 @@ useEffect(()=>{
     fetch('http://localhost:3000/recipes')
     .then(res=>res.json())
     .then(data=>{
-        console.log(data)
         setRecipe(data)
     })
 }, [])
