@@ -19,6 +19,12 @@
        text-align: center;
        color: #000;
    }
+   #search{
+
+    width: 30%;
+    height: 2rem;
+    
+   }
 
 @media screen and (max-width: 600px) {
     .topnav a:not(:first-child) {display: none;}

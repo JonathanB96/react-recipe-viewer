@@ -6,6 +6,7 @@ import Card from './Card';
 export default function Home() {
 
 const [recipe, setRecipe] = useState([]);
+const [list, setList] = useState(recipe)
 
 useEffect(()=>{
     fetch('http://localhost:3000/recipes')
@@ -13,15 +14,27 @@ useEffect(()=>{
     .then(data=>{
         setRecipe(data)
     })
-}, [])
+},[])
 
+function handleChange(e){
+  const newArr = list.filter((item)=>{
+    return item.name.toLowerCase().indexOf(e.target.value.toLowerCase()) !== -1
+  })
+  
+setRecipe(newArr)
+   
+  
+
+}
   
 
 
   return <>
     <section className='main-title'>
         <h1>All your quick and easy  recipes in one place</h1>
+        <input id='search' placeholder='Search for one of your recipes' onChange={handleChange}/>
     </section>
+    
 
     <div className="container">
         
