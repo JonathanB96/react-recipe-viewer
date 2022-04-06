@@ -8,15 +8,21 @@ export default function Home() {
 const [recipe, setRecipe] = useState([]);
 const [list, setList] = useState(recipe)
 
+
 useEffect(()=>{
     fetch('http://localhost:3000/recipes')
     .then(res=>res.json())
     .then(data=>{
         setRecipe(data)
+        setList(data)
+       
     })
 },[])
 
+
+
 function handleChange(e){
+  
   const newArr = list.filter((item)=>{
     return item.name.toLowerCase().indexOf(e.target.value.toLowerCase()) !== -1
   })
