@@ -22,9 +22,6 @@ function handleChange(e){
   })
   
 setRecipe(newArr)
-   
-  
-
 }
   
 

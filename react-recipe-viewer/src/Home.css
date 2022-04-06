@@ -9,6 +9,8 @@
 
   }
   
+  
+  
    img.recipe-img{
        max-width: 250px;
        height: 250px;
@@ -23,6 +25,7 @@
 
     width: 30%;
     height: 2rem;
+    margin-bottom: 20px;
     
    }
 
