@@ -1,8 +1,20 @@
-import React from 'react'
+import React,{useState} from 'react'
 import "./Login.css"
 import avatar from "./avatar.png"
 
 export default function Login(){
+
+  const[name, setName]=useState('')
+  const[psw, setPsw]=useState('')
+
+  function handleName(e){
+    setName(e.target.value)
+  }
+  function handlePsw(e){
+    setPsw(e.target.value)
+  }
+  
+  
     return <>
   
   <form className='form-group'>
@@ -13,11 +25,13 @@ export default function Login(){
           <div className="form-container">
              <label for="uname">
                  <strong>Username</strong></label>
-                 <input type="text" name="uname" placeholder="Enter Username"/>
+                 <input type="text" value={name} onChange={handleName}
+                  name="uname" placeholder="Enter Username"/>
               <label for="psw"><strong>Password</strong></label>
-              <input type="password" name="psw" placeholder="Enter Password"/>
+              <input type="password" value={psw} onChange={handlePsw}
+              name="psw" placeholder="Enter Password"/>
               <button  className="btn btn-succes" type="submit">Login</button>
-              <label><input type="checkbox" name="remember" checked/>Remember me</label>
+             
           
           </div>
           <div className="container" style={{background: "#f1f1f1"}}><button  type="button" class="cnlbutton">Cancel</button>
